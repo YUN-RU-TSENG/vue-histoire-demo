@@ -9,7 +9,10 @@
         "format": "prettier -w .",
         "lint": "eslint \"src/**/*.{js,vue}\"",
         "lint:fix": "eslint \"src/**/*.{js,vue}\" --fix",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "story:dev": "histoire dev",
+        "story:build": "histoire build",
+        "story:preview": "histoire preview"
     },
     "engines": {
         "node": "18.5.0",
@@ -19,12 +22,14 @@
         "vue": "^3.2.47"
     },
     "devDependencies": {
+        "@histoire/plugin-vue": "^0.15.8",
         "@vitejs/plugin-vue": "^4.1.0",
         "autoprefixer": "^10.4.14",
         "cssnano": "^6.0.0",
         "eslint": "^8.36.0",
         "eslint-config-prettier": "^8.8.0",
         "eslint-plugin-vue": "^9.10.0",
+        "histoire": "^0.15.9",
         "husky": "^8.0.0",
         "lint-staged": "^13.2.0",
         "postcss-nested": "^6.0.1",
