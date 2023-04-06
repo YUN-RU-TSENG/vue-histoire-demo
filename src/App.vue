@@ -2,7 +2,8 @@
 
 <template>
     <div>
-        <HelloWorld msg="Vite + Vue" />
+        <BaseButton>ssss</BaseButton>
+        <BaseList :items="['a', 'b', 'c']"></BaseList>
     </div>
 </template>
 

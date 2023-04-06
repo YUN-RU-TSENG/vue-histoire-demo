@@ -3,5 +3,6 @@ module.exports = {
         autoprefixer: {},
         "postcss-nested": {},
         ...(process.env.NODE_ENV === "production" ? { cssnano: {} } : {}),
+        tailwindcss: {},
     },
 }
