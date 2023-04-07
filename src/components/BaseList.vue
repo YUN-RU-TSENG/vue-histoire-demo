@@ -8,11 +8,11 @@
 </script>
 
 <template>
-    <ul class="p-1 bg-slate-500 mb-2">
+    <ul class="p-3 bg-slate-300 mb-2 rounded-sm">
         <li
-            v-for="item in items"
-            :key="item"
-            class="p-1 bg-slate-100 mb-1 last-of-type:mb-0"
+            v-for="(item, index) of items"
+            :key="index"
+            class="p-1 bg-slate-100 mb-1 last-of-type:mb-0 rounded-sm"
         >
             {{ item }}
         </li>

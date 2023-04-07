@@ -11,7 +11,7 @@
         </Variant>
         <Variant title="secondary">
             <BaseButton theme="secondary" @click="logEvent('click', $event)">
-                primary
+                secondary
             </BaseButton>
         </Variant>
         <Variant title="default">
