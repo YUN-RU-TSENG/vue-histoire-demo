@@ -19,6 +19,7 @@
         "npm": "8.12.1"
     },
     "dependencies": {
+        "dayjs": "^1.11.7",
         "vue": "^3.2.47"
     },
     "devDependencies": {
