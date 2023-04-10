@@ -3,7 +3,7 @@
 <template>
     <Story>
         <Variant>
-            <BaseList></BaseList>
+            <BaseListItem></BaseListItem>
         </Variant>
     </Story>
 </template>

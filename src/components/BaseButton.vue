@@ -46,7 +46,7 @@
 
             switch (props.themeColor) {
                 case "primary":
-                    result = "bg-cyan-400"
+                    result = "bg-slate-700 text-white"
                     break
                 case "success":
                     result = "bg-emerald-500"
@@ -55,7 +55,7 @@
                     result = "bg-rose-600"
                     break
                 default:
-                    result = "bg-gray-50"
+                    result = "bg-slate-100"
                     break
             }
 
@@ -74,7 +74,7 @@
 
 <template>
     <button
-        class="rounded-sm px-4 py-2 bg-white hover:opacity-90 text-sm"
+        class="rounded-sm px-4 py-2 hover:opacity-90 text-sm"
         :class="classOfButton"
     >
         <slot>Text</slot>

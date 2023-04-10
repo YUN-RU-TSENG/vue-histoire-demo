@@ -9,14 +9,15 @@
 </script>
 
 <template>
-    <Story>
-        <Variant>
+    <Story title="Base/BaseButton">
+        <Variant title="BaseButton">
             <template #default>
                 <BaseButton
                     v-bind="state"
                     @click="($event) => logEvent('click', $event)"
-                    >button text</BaseButton
                 >
+                    button text
+                </BaseButton>
             </template>
             <template #controls>
                 <HstSelect

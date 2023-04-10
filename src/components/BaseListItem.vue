@@ -1,7 +1,5 @@
 <script setup></script>
-
 <template>
-    <div>Hellow World</div>
+    <div>BaseListItem</div>
 </template>
-
 <style scoped></style>
