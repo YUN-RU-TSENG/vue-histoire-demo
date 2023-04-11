@@ -17,7 +17,6 @@
 
     const {
         current,
-
         currentOfCalenderDisplayYear,
         currentOfCalenderDisplayMonth,
         currentDateOfCalenderDisplay,
@@ -56,7 +55,8 @@
     function useCalenderTime(props) {
         // 當前選擇時間
         const current = computed(() => {
-            return dayjs(dayjs(props.date))
+            if (props.date) return dayjs(props.date)
+            return dayjs()
         })
 
         // 當前面板時間點
@@ -111,8 +111,23 @@
 
         function updateCurrent({ year, month, date }) {
             const data = dayjs([year, month, date]).format("YYYY/MM/DD")
+            console.log({ year, month, date })
             emits("update:date", data)
         }
+
+        console.log(
+            current.value,
+            currentOfCalenderDisplay,
+            currentOfCalenderDisplayYear,
+            currentOfCalenderDisplayMonth,
+            currentDateOfCalenderDisplay,
+            currentOfCalenderDisplayWeekDayEmpty,
+            previousMonth,
+            nextMonth,
+            goPreviousMonth,
+            goNextMonth,
+            updateCurrent
+        )
 
         return {
             current,
@@ -130,6 +145,8 @@
     }
 
     const selectedDateStyled = computed(() => ({ year, month, date }) => {
+        console.log(current.value.format("YYYY/MM/DD"))
+        console.log()
         if (
             current.value.format("YYYY/MM/DD") ===
             dayjs([year, month, date]).format("YYYY/MM/DD")
@@ -196,7 +213,7 @@
                         selectedDateStyled({
                             year: currentOfCalenderDisplayYear,
                             month: currentOfCalenderDisplayMonth,
-                            date: date,
+                            date: item,
                         })
                     "
                     @click="
@@ -204,7 +221,7 @@
                             updateCurrent({
                                 year: currentOfCalenderDisplayYear,
                                 month: currentOfCalenderDisplayMonth,
-                                date: date,
+                                date: item,
                             })
                     "
                 >

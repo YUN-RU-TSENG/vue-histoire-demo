@@ -2,7 +2,7 @@
     import { ref } from "vue"
 
     const state = ref({
-        date: undefined,
+        date: "",
         label: "日期",
     })
 </script>
